@@ -2,14 +2,15 @@
 
 We have an api that will return a list of robots, as well as their battery level and x,y coordinates in a warehouse. Using this API, we need to display all of these robots in a webpage.
 
-This is the endpoint to retrieve a list of robots in our robot fleet: https://60c8ed887dafc90017ffbd56.mockapi.io/robots. Note: if that URL doesn't work, a mirror is available here - https://svtrobotics.free.beeceptor.com/robots.
+This is the endpoint to retrieve a list of robots in our robot fleet: https://60c8ed887dafc90017ffbd56.mockapi.io/robots.
 
 Here is an example robot object:
 ```
 {
-    robotId: 58,
-    distanceToGoal: 49.9, //Indicates how far the robot is from the load which needs to be moved.
-    batteryLevel: 30 //Indicates current battery level of the robot.
+    "robotId":"1",      // Arbitrary ID.
+    "batteryLevel":99,  // Random percentage of battery life remaining.
+    "y":92,             // Current y coordinate.
+    "x":48              // Current x coordinate.
 }
 ```
 
