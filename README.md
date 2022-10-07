@@ -21,12 +21,17 @@ For bonus, we'd like to know what other features or functionality you would like
 Your submission must be a Github repo that we can fork, so basic version control skills are also needed.
 
 ### Requirements
-
 1. HTML application that makes an API call to retrieve the robots in our fleet.
-2. Robots are displayed in a table, filterable by robotId, and sortable by all attributes.
-3. (BONUS) Description of what features, functionality, etc. you would add next and how you would implement them. We want to know what you'd do next (and how you'd do it) if you had more time
-4. Use git and GitHub for version control
-5. Have fun! We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is always encouraged at SVT Robotics, and our hiring process is no different.
+2. Display the Robots in a table.
+3. The table should be sortable by all attributes.
+4. The table should be filterable by robotId.
+5. Use git and GitHub for version control
+
+### Bonus
+Description of what features, functionality, etc. you would add next and how you would implement them.
+ 
+### Have fun!
+We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is always encouraged at SVT Robotics, and our hiring process is no different.
 
 Deliverables Checklist
 
