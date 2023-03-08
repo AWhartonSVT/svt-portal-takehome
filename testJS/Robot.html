@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robot Fleet</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+</head>
+<body>
+<table id="robot-table">
+  <thead>
+  <tr>
+    <th>Robot ID</th>
+    <th>Battery Level</th>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="robot.js"></script>
+</body>
+</html>
+
+<!-- TABLE -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+
+<script type="text/javascript" class="init">
+
+$(document).ready(function() {
+    var url = "https://60c8ed887dafc90017ffbd56.mockapi.io/robots";
+
+    $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        success: function(data) {
+            // Initialize DataTables
+            var table = $("#robot-table").DataTable({
+                data: data,
+                columns: [
+                    { data: "robotId" },
+                    { data: "batteryLevel" },
+                    { data: "x" },
+                    { data: "y" }
+                ]
+            });
+
+            table.columns(0).search("").draw();
+            $("#robot-table_filter input").on("keyup", function() {
+                table.columns(0).search(this.value).draw();
+            });
+        }
+    });
+});
+</script>
+</body>
